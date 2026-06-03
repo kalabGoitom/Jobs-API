@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(cors());
 app.use(xss());
-app.use("trust proxy", 1);
+app.set("trust proxy", 1);
 
 app.use(
   rateLimiter({
